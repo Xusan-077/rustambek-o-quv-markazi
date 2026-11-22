@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "siteName": "Rustambek öquv markazi",
+    "homeTitle": "Rustambek öquv markazi — Qönğirotda matematika, ingliz va rus tili",
+    "homeDescription": "Qönğirotdagi öquv markazi: matematika, ingliz va rus tili, milliy sertifikat va imtihonlarga tayyorgarlik, oflayn va onlayn. Har hafta milliy sertifikat standartidagi mock testlar ötkaziladi.",
+    "centerTitle": "Markaz haqida",
+    "centerDescription": "Rustambek öquv markazi: ustozlar, bino, natijalar va nima uçun bizni tanlaşadi.",
+    "coursesTitle": "Kurslar",
+    "coursesDescription": "Matematika, ingliz va rus tili kurslari: Qönğirotdagi oflayn guruhlar va matematika onlayn kursi. Kursga yoziliş.",
+    "mockTitle": "Mock testlar",
+    "mockDescription": "Matematika milliy sertifikat standartidagi mock testlar: 45 savol, 150 daqiqa, video yeçim.",
+    "booksTitle": "Kitoblar",
+    "booksDescription": "A+ 100, A+ va Attestatsiya kitoblari. Özbekiston böylab yetkazib beriş.",
+    "resultsTitle": "Natijalar",
+    "resultsDescription": "Mock testlar natijalari va milliy sertifikat olgan öquvçilar.",
+    "contactTitle": "Aloqa",
+    "contactDescription": "Manzil, telefon, iş vaqti va Telegram kanallar."
+  },
+  "nav": {
+    "label": "Asosiy menyu",
+    "home": "Boş sahifa",
+    "center": "Markaz haqida",
+    "courses": "Kurslar",
+    "mock": "Mock testlar",
+    "contact": "Aloqa",
+    "openMenu": "Menyuni oçiş",
+    "closeMenu": "Menyuni yopiş",
+    "menuTitle": "Menyu",
+    "skipToContent": "Asosiy qismga ötiş",
+    "language": "Til",
+    "homeLink": "Boş sahifaga",
+    "nextMock": "{number}-mock · {date}",
+    "nextMockLabel": "Keyingi mock: {number}-mock, {date}",
+    "admin": "Administratsiya"
+  },
+  "common": {
+    "enroll": "Kursga yoziliş",
+    "close": "Yopiş",
+    "call": "Qönğiroq qiliş",
+    "registerMock": "Mockga yoziliş",
+    "registerMockNumber": "{number}-mockga yoziliş",
+    "telegramChannel": "Telegram kanal",
+    "subscribeChannel": "Telegram kanalga obuna böliş",
+    "allResults": "Barça natijalar",
+    "details": "Batafsil",
+    "aboutCenter": "Markaz haqida",
+    "photoPending": "Rasm keyinroq qöşiladi"
+  },
+  "formats": {
+    "offline": "Oflayn",
+    "online": "Onlayn"
+  },
+  "hero": {
+    "title": "Milliy sertifikatga <mark>işonç</mark> bilan tayyorlaning",
+    "lead": "Qönğirotdagi markazda tajribali ustozlar, muntazam mock testlar va aniq reja. Birinçi darsga bugun yoziling.",
+    "trustLabel": "Markaz raqamlarda",
+    "trustSubscribers": "{value} Telegram obunaçi",
+    "trustAplus": "{number}-mockda {count} ta A+",
+    "trustSubjects": "{count} fan",
+    "gradeLabel": "Milliy sertifikat darajalari",
+    "gradePick": "Darajani tanlang",
+    "gradeRange": "{from}–{to} ball",
+    "gradeTop": "{from} va undan yuqori ball"
+  },
+  "founder": {
+    "photoAlt": "Rustambek Mambetsapaev, markaz asosçisi",
+    "label": "Markaz asosçisi",
+    "name": "Rustambek Mambetsapaev",
+    "slogan": "Bilim beriş — eng işonçli sarmoya. Har bir öquvçi öz natijasiga özi erişa oladi, biz esa unga yöl körsatamiz."
+  },
+  "why": {
+    "title": "Nega Rustambek öquv markazi?",
+    "lead": "Uçta asosiy afzallikni tanlang va batafsil köring.",
+    "panelLabel": "Batafsil",
+    "items": {
+      "support": {
+        "label": "Support teacher",
+        "title": "Har bir öquvçiga support teacher",
+        "text": "Dars tugagaç ham öquvçi yolğiz qolmaydi: tuşunmagan mavzu böyiça yordamçi ustoz javob beradi.",
+        "p1": "Dars davomida savollarga tezkor javob",
+        "p2": "Uy vazifasi va xatolar ustida alohida işlaş",
+        "p3": "Öquvçi rivoji ustidan doimiy kuzatuv"
+      },
+      "free": {
+        "label": "Bepul mock testlar",
+        "title": "Bepul imkoniyatlar: mock testlar",
+        "text": "Milliy sertifikat imtihoniga öxşaş mock testlarda öz darajangizni sinab körasiz.",
+        "p1": "Real imtihon formatidagi savollar",
+        "p2": "Natija va xatolar tahlili",
+        "p3": "Mock testga yoziliş uçun tölov yöq"
+      },
+      "coworking": {
+        "label": "Co-Working zonalari",
+        "title": "Co-Working zonalari",
+        "text": "Markazda dars oraliğida va dars tugagaç tinç öqiş uçun qulay joylar bor.",
+        "p1": "Mustaqil tayyorlaniş uçun alohida joy",
+        "p2": "Döstlar bilan birga maşq qiliş imkoni",
+        "p3": "Markazdan çiqmay vazifani bajariş"
+      }
+    }
+  },
+  "grades": {
+    "none": "Darajasiz"
+  },
+  "subjects": {
+    "title": "Kurslar",
+    "lead": "Har bir fan böyiça guruhlar Qönğirotdagi boş binoda ötadi.",
+    "certificateBadge": "Milliy sertifikat · A+"
+  },
+  "advantages": {
+    "title": "Nima uçun biz",
+    "lead": "Faqat tekşirsa böladigan faktlar."
+  },
+  "teachers": {
+    "title": "Ustozlar",
+    "lead": "Har bir fanni öz ustozi olib boradi.",
+    "experienceLabel": "Tajriba"
+  },
+  "mockBand": {
+    "title": "Har hafta mock test — darajangizni imtihondan oldin biling",
+    "factsLabel": "Mock formati",
+    "questions": "{count} savol",
+    "minutes": "{count} daqiqa",
+    "price": "{price} söm",
+    "stepsLabel": "Qanday ötadi",
+    "steps": {
+      "register": "{admin} ga yoziling",
+      "pay": "Tölov çekini yuboring",
+      "solve": "Bot orqali yoki binoda yeçing",
+      "report": "Daraja va video yeçimni oling"
+    },
+    "nextTitle": "Keyingi mock",
+    "nextNumber": "{number}-mock",
+    "when": "{date}, {time}",
+    "where": "Onlayn bot orqali yoki markaz binosida",
+    "languages": "Savollar özbek, qoraqalpoq va rus tillarida",
+    "noMockTitle": "Keyingi mock sanasi kanalda e'lon qilinadi",
+    "noMockText": "Kanalga obuna böling, röyxat oçilganda birinçi bilasiz."
+  },
+  "results": {
+    "certCarouselTitle": "Milliy sertifikat natijalari",
+    "certCarouselLead": "Har bir natija — haqiqiy öquvçimizniki.",
+    "certImageAlt": "{subject} böyiça milliy sertifikat",
+    "title": "Natijalar",
+    "lead": "Oxirgi mock darajalari va milliy sertifikat olgan öquvçilar.",
+    "chartTitle": "{number}-mock natijalari",
+    "chartTotal": "{total} iştirokçi",
+    "certificatesTitle": "Sertifikat olganlar",
+    "gradeLabel": "Daraja: {grade}",
+    "certOpen": "{subject} sertifikatini kattalashtirib köriş",
+    "certPrev": "Oldingi sertifikat",
+    "certNext": "Keyingi sertifikat"
+  },
+  "extras": {
+    "title": "Qöşimça",
+    "books": {
+      "title": "Muallif kitoblari",
+      "text": "A+ 100, A+ va Attestatsiya. Özbekiston böylab yetkazib beriladi."
+    },
+    "online": {
+      "title": "Onlayn kurs",
+      "text": "Matematika: MS 6.0 yopiq guruhi. Yangi guruh oçildi."
+    }
+  },
+  "visit": {
+    "title": "Markazga taşrif",
+    "lead": "Dars, mock yoki maslahat uçun boş binoga keling.",
+    "addressLabel": "Manzil",
+    "hoursLabel": "Iş vaqti",
+    "hours": "{opens}–{closes}",
+    "phonesLabel": "Telefon",
+    "directions": "Yönaliş oliş",
+    "mapPlaceholder": "Xarita keyinroq qöşiladi",
+    "copy": "Nusxalaş: {value}",
+    "copied": "Nusxalandi",
+    "openNow": "Hozir oçiq · {closes} gaça",
+    "closedNow": "Hozir yopiq · {opens} da oçiladi"
+  },
+  "faq": {
+    "title": "Köp söraladigan savollar"
+  },
+  "enroll": {
+    "title": "Kursga yoziliş",
+    "lead": "Arizani qoldiring: administrator qönğiroq qilib, guruh va jadval haqida aytib beradi.",
+    "formLabel": "Kursga yoziliş arizasi",
+    "fullName": "Ism va familiya",
+    "phone": "Telefon raqam",
+    "requiredMark": "majburiy",
+    "submit": "Ariza yuboriş",
+    "submitting": "Yuborilmoqda…",
+    "successTitle": "Arizangiz qabul qilindi",
+    "honeypot": "Bu maydonni böş qoldiring",
+    "telegramTitle": "Yangi ariza — Kursga yoziliş",
+    "pageLanguage": "Sayt tili",
+    "errors": {
+      "required": "Bu maydonni töldiring.",
+      "nameShort": "Ism kamida 3 harfdan iborat bölsin.",
+      "nameLong": "Ism juda uzun.",
+      "phoneInvalid": "Raqamni töliq kiriting: +998 va 9 ta raqam."
+    },
+    "failure": {
+      "invalid": "Ariza yuborilmadi: maydonlarni tekşiring.",
+      "rateLimited": "Juda köp uriniş böldi. 10 daqiqadan keyin qayta yuboring yoki qönğiroq qiling.",
+      "failed": "Ariza yuborilmadi. Qayta urinib köring yoki {phone} raqamiga qönğiroq qiling."
+    },
+    "namePlaceholder": "Ismingiz"
+  },
+  "center": {
+    "title": "Rustambek oqıw orayı — Qönğirotdagi öquv markazi",
+    "lead": "Matematika, ingliz va rus tili. Milliy sertifikat va imtihonlarga tayyorgarlik, har hafta mock test, öz kitoblarimiz.",
+    "photoAlt": "Markaz binosi",
+    "statsLabel": "Markaz raqamlarda",
+    "stats": {
+      "subscribers": "Telegram obunaçi",
+      "subjects": "fan",
+      "weeklyValue": "Har hafta",
+      "weekly": "mock test",
+      "languages": "tilda test"
+    },
+    "galleryTitle": "Bino",
+    "galleryLead": "Dars xonalari va mock test ötadigan zal.",
+    "ctaTitle": "Qaysi fan sizga kerak?",
+    "ctaText": "Arizani qoldiring, administrator mos guruhni tanlaşga yordam beradi."
+  },
+  "courses": {
+    "title": "Kurslar",
+    "lead": "Barça guruhlar Qönğirotdagi boş binoda. Fanni tanlang va bir bosişda yoziling.",
+    "schedule": "Jadval",
+    "duration": "Muddat",
+    "price": "Narxi",
+    "priceValue": "{price} söm",
+    "location": "Manzil",
+    "cohorts": "Oçiq guruhlar"
+  },
+  "contact": {
+    "channelsTitle": "Telegram kanallar",
+    "channelsLead": "Har bir yönalişning öz kanali bor."
+  },
+  "footer": {
+    "about": "Qönğirotdagi öquv markazi: matematika, ingliz va rus tili.",
+    "contact": "Aloqa",
+    "hours": "Iş vaqti: {opens}–{closes}",
+    "instagram": "Instagram",
+    "pages": "Sahifalar",
+    "extra": "Qöşimça",
+    "books": "Kitoblar",
+    "onlineCourse": "Onlayn kurs",
+    "results": "Natijalar",
+    "telegramChannel": "Telegram kanal",
+    "rights": "© {year} {name}"
+  },
+  "stub": {
+    "soon": "Bu sahifa tez orada tayyor böladi.",
+    "mockAction": "{admin} orqali yoziliş"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "text": "Havola eskirgan yoki manzilda xato bor. Boş sahifadan davom eting.",
+    "home": "Boş sahifaga qaytiş"
+  },
+  "booksSection": {
+    "title": "Muallif kitoblari",
+    "lead": "Milliy sertifikat va attestatsiyaga tayyorlanish uçun markaz kitoblari. Özbekiston böylab yetkazib beriladi.",
+    "order": "Kitob buyurtma qiliş",
+    "coverAlt": "muqova",
+    "details": "Batafsil va demo"
+  },
+  "bookDetail": {
+    "metaTitle": "{title} kitobi",
+    "back": "Barça kitoblar",
+    "eyebrow": "Muallif kitobi",
+    "pagesCount": "{pages} bet",
+    "priceValue": "{price} söm",
+    "demoChip": "{count} bet demo",
+    "order": "Buyurtma beriş",
+    "viewDemo": "Demo variantni köriş",
+    "aboutLabel": "Kitob haqida",
+    "authorLabel": "Muallif",
+    "featuresTitle": "Kitob içida",
+    "demoLabel": "Demo",
+    "demoTitle": "Kitobni varaqlab köring",
+    "demoLead": "Kitobdan {count} sahifa. Töliq variantni Telegram orqali buyurtma qiling.",
+    "pageOf": "{page} / {total}",
+    "pageAlt": "{title}, {page}-sahifa",
+    "prevPage": "Oldingi sahifa",
+    "nextPage": "Keyingi sahifa",
+    "goToPage": "{page}-sahifaga ötiş",
+    "zoomPage": "{page}-sahifani kattalaştiriş",
+    "pageSlider": "Sahifani tanlaş",
+    "hint": "Strelkalar, svayp yoki sahifani bosing",
+    "downloadPdf": "PDF'ni yuklab oliş",
+    "noDemo": "Bu kitobning demo varianti tez orada qöşiladi.",
+    "stepsLabel": "Buyurtma",
+    "stepsTitle": "Buyurtma qanday böladi",
+    "steps": {
+      "one": {
+        "title": "Raqam qoldirasiz",
+        "text": "Telegram'da ismingiz va telefoningizni yozasiz, bu bir daqiqa oladi."
+      },
+      "two": {
+        "title": "Qönğiroq qilamiz",
+        "text": "Administratorimiz buyurtmani va savollaringizni aniqlaştiradi."
+      },
+      "three": {
+        "title": "Yetkazib beramiz",
+        "text": "Kitobni yaqin kunlarda Özbekiston böylab manzilingizga yuboramiz."
+      }
+    }
+  }
+}

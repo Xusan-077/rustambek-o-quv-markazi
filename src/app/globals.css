@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e1726;
+  --color-muted: #4b5565;
+  --color-line: #e3e7ee;
+  --color-paper: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-navy: #0b1b3a;
+  --color-navy-text: #c9d3e6;
+  --color-brand: #1f4fd8;
+  --color-brand-soft: #eef2fb;
+  --color-accent: #f5a524;
+  --color-accent-soft: #fef3dc;
+  --color-success: #1e6b34;
+  --color-success-soft: #e6f4ea;
+  --color-danger: #b42318;
+  --color-grid-line: rgb(255 255 255 / 0.07);
+  --color-grid-line-light: rgb(31 79 216 / 0.07);
+  /* Flag colours for the language dropdown. */
+  --color-flag-blue: #0099b5;
+  --color-flag-green: #1eb53a;
+  --color-flag-red: #ce1126;
+  --color-flag-ochre: #d9a441;
+  --color-flag-ru-blue: #0039a6;
+  --color-flag-ru-red: #d52b1e;
+  --color-scrim: rgb(11 27 58 / 0.55);
+
+  --radius-card: 18px;
+  --radius-btn: 12px;
+
+  --spacing-section: 64px;
+  --spacing-section-lg: 96px;
+  --spacing-grid: 32px;
+  --container-page: 1200px;
+  --spacing-touch: 44px;
+  /* Floating header: 12px gap + 64px pill. It overlays the page, so content makes room for it. */
+  --spacing-header: 76px;
+  --spacing-sticky-cta: 80px;
+
+  --shadow-lift: 0 1px 0 rgb(14 23 38 / 0.04), 0 24px 48px -24px rgb(11 27 58 / 0.45);
+  /* Front page of the book demo reel, lifted off the pale graph-paper stage. */
+  --shadow-page: 0 40px 80px -30px rgb(11 27 58 / 0.45), 0 0 0 1px rgb(14 23 38 / 0.06);
+}
+
+@theme inline {
+  --font-display: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-onest), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 104px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  .on-navy :focus-visible {
+    outline-color: var(--color-accent);
+  }
+}
+
+/* Graph-paper ("katak daftar") pattern for navy hero and CTA backgrounds. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
+  background-size: var(--spacing-grid) var(--spacing-grid);
+}
+
+/* Same pattern, light variant, for charts drawn on white. */
+@utility bg-grid-light {
+  background-image:
+    linear-gradient(to right, var(--color-grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid-line-light) 1px, transparent 1px);
+  background-size: calc(var(--spacing-grid) / 2) calc(var(--spacing-grid) / 2);
+}
+
+/* FAQ accordion built on <details>. */
+@layer components {
+  .faq-item > summary {
+    list-style: none;
+  }
+
+  .faq-item > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item .faq-chevron {
+    rotate: -90deg;
+  }
+
+  .faq-item[open] .faq-chevron {
+    rotate: 0deg;
+  }
+
+  .faq-item::details-content {
+    interpolate-size: allow-keywords;
+    overflow: clip;
+    contain: layout;
+  }
+
+  .faq-item:not([open])::details-content {
+    block-size: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .faq-item .faq-chevron {
+      transition: rotate 0.2s;
+    }
+
+    .faq-item::details-content {
+      transition:
+        block-size 0.3s ease-in-out,
+        content-visibility 0.3s allow-discrete;
+    }
+  }
+
+  /* Mobile menu sheet (<dialog> opened with showModal). */
+  .menu-sheet {
+    inset: 0 0 0 auto;
+    margin: 0;
+    width: min(22rem, 88dvw);
+    max-width: none;
+    height: 100dvh;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    overscroll-behavior: contain;
+  }
+
+  .menu-sheet::backdrop {
+    background: var(--color-scrim);
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .menu-sheet,
+    .menu-sheet::backdrop {
+      transition:
+        translate 0.25s ease-out,
+        opacity 0.25s ease-out,
+        overlay 0.25s allow-discrete,
+        display 0.25s allow-discrete;
+    }
+
+    .menu-sheet:not([open]) {
+      translate: 100% 0;
+    }
+
+    .menu-sheet:not([open])::backdrop {
+      opacity: 0;
+    }
+
+    @starting-style {
+      .menu-sheet[open] {
+        translate: 100% 0;
+      }
+
+      .menu-sheet[open]::backdrop {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/* Endless horizontal carousel: the track holds two identical copies and slides by half. */
+@layer components {
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .marquee-track {
+      animation: marquee 45s linear infinite;
+    }
+
+    .marquee-track-reverse {
+      animation-direction: reverse;
+    }
+
+    .marquee:hover .marquee-track,
+    .marquee:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      overflow-x: auto;
+    }
+
+    .marquee-copy:last-child {
+      display: none;
+    }
+  }
+}
+
+@keyframes lang-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* A last section that keeps its own bottom padding (the enrollment band) meets the footer directly. */
+main:has(> section[data-padded]:last-of-type) ~ footer {
+  margin-top: 0;
+}
+
+/* Intro already seen this session (or reduced motion): hidden before first paint, see layout script. */
+html[data-intro="seen"] .intro-splash {
+  display: none;
+}
+
+/* Toast: slides in from the right; reduced-motion users just get it without movement. */
+.toast-in {
+  animation: toast-in 0.25s ease-out;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toast-in {
+    animation: none;
+  }
+}
+
+/* Keep the scrollbar's space reserved so locking scroll (intro, modal) never shifts the layout. */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Hero graph paper: fine 16px cells and bold 80px cells in the brand blue. */
+.bg-graph,
+.bg-graph-strong {
+  --graph-major: color-mix(in srgb, var(--color-brand) 13%, transparent);
+  --graph-minor: color-mix(in srgb, var(--color-brand) 6%, transparent);
+  background-image:
+    linear-gradient(to right, var(--graph-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--graph-major) 1px, transparent 1px),
+    linear-gradient(to right, var(--graph-minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--graph-minor) 1px, transparent 1px);
+  background-size:
+    80px 80px,
+    80px 80px,
+    16px 16px,
+    16px 16px;
+  background-position: -1px -1px;
+}
+
+.bg-graph-strong {
+  --graph-major: color-mix(in srgb, var(--color-brand) 40%, transparent);
+  --graph-minor: color-mix(in srgb, var(--color-brand) 18%, transparent);
+}
+
+/* The stronger grid only shows in a soft circle around the mouse (see HeroCanvas). */
+.hero-spot {
+  opacity: var(--spot-o, 0);
+  mask-image: radial-gradient(
+    280px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+    black,
+    transparent 75%
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-spot {
+    transition: opacity 0.4s ease;
+  }
+}
+
+/* The founder scene hides the header while it is pinned (see FounderPinned). */
+[data-site-header] > div {
+  transition: translate 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+html[data-hide-header] [data-site-header] > div {
+  translate: 0 calc(-100% - 2rem);
+}

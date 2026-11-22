@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "siteName": "Rustambek oqıw orayı",
+    "homeTitle": "Rustambek oqıw orayı — Qońıratta matematika, inglis hám rus tili",
+    "centerTitle": "Oray haqqında",
+    "coursesTitle": "Kurslar",
+    "mockTitle": "Mock testler",
+    "booksTitle": "Kitaplar",
+    "resultsTitle": "Nátiyjeler",
+    "contactTitle": "Baylanıs"
+  },
+  "nav": {
+    "label": "Tiykarǵı menyu",
+    "home": "Bas bet",
+    "center": "Oray haqqında",
+    "courses": "Kurslar",
+    "mock": "Mock testler",
+    "contact": "Baylanıs",
+    "openMenu": "Menyudı ashıw",
+    "closeMenu": "Menyudı jabıw",
+    "menuTitle": "Menyu",
+    "language": "Til",
+    "homeLink": "Bas betke",
+    "nextMock": "{number}-mock · {date}",
+    "nextMockLabel": "Keyingi mock: {number}-mock, {date}"
+  },
+  "common": {
+    "enroll": "Kursqa jazılıw",
+    "close": "Jabıw",
+    "call": "Qońıraw etiw",
+    "registerMock": "Mockqa jazılıw",
+    "registerMockNumber": "{number}-mockqa jazılıw",
+    "telegramChannel": "Telegram kanal",
+    "allResults": "Barlıq nátiyjeler",
+    "details": "Tolıǵıraq",
+    "aboutCenter": "Oray haqqında"
+  },
+  "formats": {
+    "offline": "Oflayn",
+    "online": "Onlayn"
+  },
+  "hero": {
+    "title": "Milliy sertifikatqa <mark>isenim</mark> menen tayarlanıń",
+    "trustSubscribers": "{value} Telegram jazılıwshı",
+    "trustAplus": "{number}-mockta {count} A+",
+    "trustSubjects": "{count} pán"
+  },
+  "founder": {
+    "photoAlt": "Rustambek Mambetsapaev, oraydıń negizlewshisi",
+    "label": "Oraydıń negizlewshisi",
+    "name": "Rustambek Mambetsapaev"
+  },
+  "grades": {
+    "none": "Dárejesiz"
+  },
+  "subjects": {
+    "title": "Kurslar",
+    "certificateBadge": "Milliy sertifikat · A+"
+  },
+  "advantages": {
+    "title": "Nege biz"
+  },
+  "teachers": {
+    "title": "Ustazlar",
+    "experience": "Tájiriybe: {value}"
+  },
+  "mockBand": {
+    "questions": "{count} soraw",
+    "minutes": "{count} minut",
+    "price": "{price} sum",
+    "nextTitle": "Keyingi mock",
+    "nextNumber": "{number}-mock",
+    "when": "{date}, {time}"
+  },
+  "results": {
+    "title": "Nátiyjeler",
+    "chartTitle": "{number}-mock nátiyjeleri",
+    "chartTotal": "{total} qatnasıwshı",
+    "certificatesTitle": "Sertifikat alǵanlar",
+    "gradeLabel": "Dáreje: {grade}"
+  },
+  "extras": {
+    "books": {
+      "title": "Avtor kitapları",
+      "text": "A+ 100, A+ hám Attestatsiya. Ózbekstan boylap jetkerip beriledi."
+    },
+    "online": {
+      "title": "Onlayn kurs",
+      "text": "Matematika: MS 6.0 jabıq toparı. Jańa topar ashıldı."
+    }
+  },
+  "visit": {
+    "addressLabel": "Mánzil",
+    "hoursLabel": "Jumıs waqtı",
+    "hours": "{opens}–{closes}",
+    "phonesLabel": "Telefon"
+  },
+  "faq": {
+    "title": "Kóp beriletuǵın sorawlar"
+  },
+  "enroll": {
+    "title": "Kursqa jazılıw",
+    "fullName": "Atı hám familiyası",
+    "phone": "Telefon nomeri",
+    "phoneHint": "Mısalı: +998 90 123 45 67",
+    "submit": "Arza jiberiw",
+    "successTitle": "Arzańız qabıllandı"
+  },
+  "center": {
+    "title": "Rustambek oqıw orayı — Qońırattaǵı oqıw orayı",
+    "stats": {
+      "subscribers": "Telegram jazılıwshı",
+      "subjects": "pán",
+      "weekly": "mock test",
+      "languages": "tilde test"
+    },
+    "galleryTitle": "Imarat"
+  },
+  "courses": {
+    "title": "Kurslar",
+    "schedule": "Keste",
+    "price": "Bahası",
+    "priceValue": "{price} sum",
+    "location": "Mánzil"
+  },
+  "contact": {
+    "channelsTitle": "Telegram kanallar"
+  },
+  "footer": {
+    "contact": "Baylanıs",
+    "hours": "Jumıs waqtı: {opens}–{closes}",
+    "instagram": "Instagram",
+    "pages": "Betler",
+    "books": "Kitaplar",
+    "onlineCourse": "Onlayn kurs",
+    "results": "Nátiyjeler",
+    "telegramChannel": "Telegram kanal",
+    "rights": "© {year} {name}"
+  },
+  "stub": {
+    "soon": "Bul bet tez arada tayar boladı.",
+    "mockAction": "{admin} arqalı jazılıw"
+  },
+  "notFound": {
+    "title": "Bet tabılmadı",
+    "home": "Bas betke qaytıw"
+  }
+}

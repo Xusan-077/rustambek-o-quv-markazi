@@ -16,7 +16,7 @@ interface TeachersGridProps {
   tone?: "surface" | "paper";
 }
 
-/** Heading plus one TeacherCard per teacher. */
+/** Heading plus one TeacherCard per teacher: a looping row on phones, a grid from `sm` up. */
 export function TeachersGrid({
   teachers,
   subjectNames,
@@ -27,6 +27,25 @@ export function TeachersGrid({
   const locale = useLocale();
   const ui = useTranslations("teachers");
   const common = useTranslations("common");
+
+  const card = (teacher: Teacher) => (
+    <TeacherCard
+      name={teacher.name}
+      subject={subjectNames[teacher.subject]}
+      experience={
+        isPlaceholder(teacher.experience) ? teacher.experience : t(teacher.experience, locale)
+      }
+      bio={isPlaceholder(teacher.bio) ? teacher.bio : t(teacher.bio, locale)}
+      photo={teacher.photo}
+      phone={phone}
+      labels={{
+        experience: ui("experienceLabel"),
+        enroll: common("enroll"),
+        close: common("close"),
+        photoPending: common("photoPending"),
+      }}
+    />
+  );
 
   return (
     <Section tone={tone} labelledBy="teachers-title">
@@ -40,31 +59,33 @@ export function TeachersGrid({
         <p className="mx-auto mt-3 max-w-2xl text-lg text-muted">{ui("lead")}</p>
       </Reveal>
 
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {teachers.map((teacher, index) => {
-          const subject = subjectNames[teacher.subject];
-          const experience = isPlaceholder(teacher.experience)
-            ? teacher.experience
-            : t(teacher.experience, locale);
-          return (
-            <Reveal as="li" delay={index * 0.1} key={teacher.id}>
-              <TeacherCard
-                name={teacher.name}
-                subject={subject}
-                experience={experience}
-                bio={isPlaceholder(teacher.bio) ? teacher.bio : t(teacher.bio, locale)}
-                photo={teacher.photo}
-                phone={phone}
-                labels={{
-                  experience: ui("experienceLabel"),
-                  enroll: common("enroll"),
-                  close: common("close"),
-                  photoPending: common("photoPending"),
-                }}
-              />
-            </Reveal>
-          );
-        })}
+      {/* Phones: an endless row that drifts sideways; touching or focusing it pauses it. */}
+      <div className="marquee -mx-6 overflow-hidden sm:hidden">
+        <div className="marquee-track" style={{ animationDuration: `${teachers.length * 10}s` }}>
+          {[0, 1].map((copy) => (
+            <ul
+              key={copy}
+              // The second copy only fills the loop: hidden from screen readers and Tab.
+              aria-hidden={copy === 1}
+              inert={copy === 1}
+              className="marquee-copy flex shrink-0 gap-4 pr-4 first:pl-6"
+            >
+              {teachers.map((teacher) => (
+                <li key={teacher.id} className="w-[78vw] max-w-80 shrink-0">
+                  {card(teacher)}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+
+      <ul className="hidden gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+        {teachers.map((teacher, index) => (
+          <Reveal as="li" delay={index * 0.1} key={teacher.id}>
+            {card(teacher)}
+          </Reveal>
+        ))}
       </ul>
 
       {showCenterLink ? (

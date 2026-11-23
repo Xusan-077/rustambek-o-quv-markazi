@@ -8,9 +8,10 @@ import { Faq } from "@/components/sections/home/Faq";
 import { FounderStatement } from "@/components/sections/home/FounderStatement";
 import { Hero } from "@/components/sections/home/Hero";
 import { Subjects } from "@/components/sections/home/Subjects";
+import { VideoStories } from "@/components/sections/home/VideoStories";
 import { WhyChoose } from "@/components/sections/home/WhyChoose";
 import { AdvantagesGrid } from "@/components/shared/AdvantagesGrid";
-import { EnrollSection } from "@/components/shared/EnrollSection";
+import { SubjectCta } from "@/components/shared/SubjectCta";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { TeachersGrid } from "@/components/shared/TeachersGrid";
 import { VisitInfo } from "@/components/shared/VisitInfo";
@@ -26,12 +27,13 @@ import {
   getSite,
   getSubjects,
   getTeachers,
+  getVideos,
 } from "@/lib/data";
 import { pageMetadata } from "@/lib/metadata";
 import { ROUTES } from "@/lib/routes";
 import { t } from "@/lib/utils";
 import { educationalOrganizationJsonLd } from "@/lib/seo";
-import { formatAddress, shelfBooks, subjectNameMap } from "@/lib/view";
+import { formatAddress, shelfBooks, subjectCtaItems, subjectNameMap } from "@/lib/view";
 
 export function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   return pageMetadata(params, "home", ROUTES.home);
@@ -52,6 +54,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     grades,
     certificateImages,
     books,
+    videos,
     visit,
   ] = await Promise.all([
     getSite(),
@@ -64,6 +67,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     getGradeBands(),
     getCertificateImages(),
     getBooks(),
+    getVideos(),
     getTranslations({ locale, namespace: "visit" }),
   ]);
 
@@ -91,6 +95,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           }))
           .filter((group) => group.images.length > 0)}
       />
+      <VideoStories videos={videos} />
       <TeachersGrid
         teachers={teachers}
         subjectNames={subjectNameMap(subjects, locale)}
@@ -107,7 +112,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         mapEmbedUrl={site.mapEmbedUrl}
       />
       <Faq items={faq} />
-      <EnrollSection variant="compact" phone={phone} />
+      <SubjectCta phone={phone} subjects={subjectCtaItems(subjects, locale)} />
     </>
   );
 }

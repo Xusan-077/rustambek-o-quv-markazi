@@ -28,6 +28,8 @@
 
   --radius-card: 18px;
   --radius-btn: 12px;
+  --radius-photo: 72px; /* /markaz hero photo: very round corners that still keep the logo whole */
+  --radius-photo-sm: 44px; /* the same photo on phones, where it is shorter */
 
   --spacing-section: 64px;
   --spacing-section-lg: 96px;
@@ -212,6 +214,7 @@
     }
 
     .marquee:hover .marquee-track,
+    .marquee:active .marquee-track,
     .marquee:focus-within .marquee-track {
       animation-play-state: paused;
     }
@@ -317,4 +320,10 @@ html {
 }
 html[data-hide-header] [data-site-header] > div {
   translate: 0 calc(-100% - 2rem);
+}
+
+/* Pencil shading for the passed bars of the hero grade chart. */
+.bg-hatch {
+  --hatch: color-mix(in srgb, var(--color-brand) 30%, transparent);
+  background-image: repeating-linear-gradient(-45deg, var(--hatch) 0 1.5px, transparent 1.5px 7px);
 }

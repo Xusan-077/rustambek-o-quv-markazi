@@ -24,10 +24,15 @@ export function bookHref(slug: string): BookRoute {
 }
 
 /**
- * Header order mirrors the site's priorities: the centre first, mocks second.
- * Books and results live in the footer's "Qo'shimcha" column.
+ * Header order mirrors the site's priorities: the centre first, then courses and books.
+ * Results live in the footer's "Qo'shimcha" column.
  */
-export const NAV_ROUTES = ["center", "courses", "contact"] as const satisfies readonly RouteKey[];
+export const NAV_ROUTES = [
+  "center",
+  "courses",
+  "books",
+  "contact",
+] as const satisfies readonly RouteKey[];
 
 /** In-page anchors shared between sections and links. */
 export const ANCHORS = {

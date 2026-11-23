@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { INTRO_DONE_EVENT } from "./useIntroDone";
 
 const INTRO_STORAGE_KEY = "intro-seen";
 const SHOW_MS = 2800; // how long the logo stays before the intro fades away
@@ -35,6 +36,13 @@ export function IntroSplash({ siteName, description }: { siteName: string; descr
       document.body.style.overflow = "";
     };
   }, []);
+
+  // Tell the page the moment the fade starts, so hero entrances play as the splash clears.
+  useEffect(() => {
+    if (visible) return;
+    document.documentElement.dataset.introDone = "true";
+    window.dispatchEvent(new Event(INTRO_DONE_EVENT));
+  }, [visible]);
 
   return (
     <AnimatePresence onExitComplete={() => (document.body.style.overflow = "")}>

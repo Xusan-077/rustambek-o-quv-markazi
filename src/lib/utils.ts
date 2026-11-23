@@ -3,10 +3,10 @@ import { extendTailwindMerge } from "tailwind-merge";
 import { INTL_LOCALE } from "@/i18n/routing";
 import type { Locale, Localized, Placeholder } from "@/types/content";
 
-// Teach tailwind-merge that our grid-paper utilities are background images,
+// Teach tailwind-merge that our grid-paper and hatch utilities are background images,
 // otherwise `bg-navy bg-grid` would be merged down to just `bg-grid`.
 const twMerge = extendTailwindMerge({
-  extend: { classGroups: { "bg-image": ["bg-grid", "bg-grid-light"] } },
+  extend: { classGroups: { "bg-image": ["bg-grid", "bg-grid-light", "bg-hatch"] } },
 });
 
 export function cn(...inputs: ClassValue[]) {

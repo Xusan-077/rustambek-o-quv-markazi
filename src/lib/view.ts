@@ -4,6 +4,18 @@ import { formatNumber, formatPrice, isPlaceholder, t } from "./utils";
 
 type NamedSubject = { slug: SubjectSlug; name: Localized };
 
+/** Subjects for the "Qaysi fan sizga kerak?" enrol block. */
+export function subjectCtaItems(
+  subjects: (NamedSubject & { description: Localized })[],
+  locale: Locale,
+) {
+  return subjects.map((subject) => ({
+    slug: subject.slug,
+    name: t(subject.name, locale),
+    description: t(subject.description, locale),
+  }));
+}
+
 export function subjectOptions(subjects: NamedSubject[], locale: Locale) {
   return subjects.map((subject) => ({ slug: subject.slug, name: t(subject.name, locale) }));
 }
@@ -62,4 +74,16 @@ export function bookFacts(book: Book, locale: Locale) {
     pages: isPlaceholder(book.pages) ? book.pages : formatNumber(book.pages, locale),
     price: formatPrice(book.price, locale),
   };
+}
+
+/**
+ * Embed address for an Instagram reel or post link, e.g.
+ * https://www.instagram.com/reel/ABC123/?igsh=... -> https://www.instagram.com/reel/ABC123/embed/
+ * Returns null when the link is not a reel/post.
+ */
+export function instagramEmbedUrl(url: string): string | null {
+  const match = url.match(/instagram\.com\/(?:[\w.]+\/)?(reels?|p|tv)\/([\w-]+)/);
+  if (!match) return null;
+  const kind = match[1] === "reels" ? "reel" : match[1];
+  return `https://www.instagram.com/${kind}/${match[2]}/embed/`;
 }

@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { ChannelsList } from "@/components/sections/contact/ChannelsList";
+import { SubjectCta } from "@/components/shared/SubjectCta";
 import { VisitInfo } from "@/components/shared/VisitInfo";
 import { routing } from "@/i18n/routing";
-import { getChannels, getSite } from "@/lib/data";
+import { getChannels, getSite, getSubjects } from "@/lib/data";
 import { pageMetadata } from "@/lib/metadata";
 import { ROUTES } from "@/lib/routes";
 import { t } from "@/lib/utils";
-import { formatAddress } from "@/lib/view";
+import { formatAddress, subjectCtaItems } from "@/lib/view";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/aloqa">): Promise<Metadata> {
   return pageMetadata(params, "contact", ROUTES.contact);
@@ -20,9 +21,10 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/aloqa
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
 
-  const [site, channels, meta] = await Promise.all([
+  const [site, channels, subjects, meta] = await Promise.all([
     getSite(),
     getChannels(),
+    getSubjects(),
     getTranslations({ locale, namespace: "meta" }),
   ]);
 
@@ -46,6 +48,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/aloqa
         }))}
         instagramUrl={site.instagramUrl}
       />
+      <SubjectCta phone={site.phones[0]} subjects={subjectCtaItems(subjects, locale)} />
     </>
   );
 }

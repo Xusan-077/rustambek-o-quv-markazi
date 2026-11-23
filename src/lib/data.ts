@@ -18,6 +18,7 @@ import {
 import { site } from "@/content/site";
 import { subjects } from "@/content/subjects";
 import { teachers } from "@/content/teachers";
+import { videos } from "@/content/videos";
 import type {
   Channel,
   ChannelId,
@@ -53,6 +54,10 @@ export async function getSubjects(): Promise<SubjectSummary[]> {
       courses.some((c) => c.subject === subject.slug && c.format === format),
     ),
   }));
+}
+
+export async function getVideos() {
+  return videos;
 }
 
 export async function getTeachers() {

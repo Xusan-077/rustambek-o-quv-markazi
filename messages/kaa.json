@@ -22,7 +22,8 @@
     "language": "Til",
     "homeLink": "Bas betke",
     "nextMock": "{number}-mock · {date}",
-    "nextMockLabel": "Keyingi mock: {number}-mock, {date}"
+    "nextMockLabel": "Keyingi mock: {number}-mock, {date}",
+    "books": "Kitaplar"
   },
   "common": {
     "enroll": "Kursqa jazılıw",
@@ -40,10 +41,10 @@
     "online": "Onlayn"
   },
   "hero": {
-    "title": "Milliy sertifikatqa <mark>isenim</mark> menen tayarlanıń",
-    "trustSubscribers": "{value} Telegram jazılıwshı",
+    "title": "Milliy sertifikatqa isenim menen tayarlanıń",
+    "trustSubscribers": "<b>{value}</b> Telegram jazılıwshı",
     "trustAplus": "{number}-mockta {count} A+",
-    "trustSubjects": "{count} pán"
+    "trustSubjects": "<b>{count}</b> pán"
   },
   "founder": {
     "photoAlt": "Rustambek Mambetsapaev, oraydıń negizlewshisi",
@@ -114,7 +115,9 @@
       "weekly": "mock test",
       "languages": "tilde test"
     },
-    "galleryTitle": "Imarat"
+    "galleryTitle": "Imarat",
+    "heroLine1": "Rustambek",
+    "heroLine2": "oqıw orayı"
   },
   "courses": {
     "title": "Kurslar",

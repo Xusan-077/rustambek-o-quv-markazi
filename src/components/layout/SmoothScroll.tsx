@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const EASE = 0.1; // share of the remaining distance covered per frame
+const EASE = 0.075; // share of the remaining distance covered per frame (lower = longer glide)
 const NOTCH = 40; // smaller wheel deltas are trackpads, which already scroll smoothly
 
 /** True if the wheel event happens inside something that scrolls on its own (menus, iframes...). */

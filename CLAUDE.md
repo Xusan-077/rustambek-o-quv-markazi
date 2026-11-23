@@ -10,10 +10,10 @@ keyin Django REST API ulanadi.
 
 1. **Markaz** — asosiy konversiya: kursga yozilish (`/kurslar#yozilish`) yoki qo'ng'iroq (`tel:`).
 2. **Mock testlar** — ikkinchi daraja: bosh sahifada bitta navy band, alohida `/mock` sahifa.
-3. **Kitoblar va onlayn kurs** — uchinchi daraja: menyuda yo'q, footer "Qo'shimcha" ustuni va kichik kartalar.
+3. **Kitoblar va onlayn kurs** — uchinchi daraja: `/kitoblar` header menyuda, onlayn kurs footer "Qo'shimcha" ustunida.
 
-Header menyu: Markaz haqida `/markaz` · Kurslar `/kurslar` · Mock testlar `/mock` · Aloqa `/aloqa`.
-Header CTA va mobil sticky bar: "Qo'ng'iroq qilish" + "Kursga yozilish". `/kitoblar`, `/natijalar` footer'da.
+Header menyu (`NAV_ROUTES`): Markaz haqida `/markaz` · Kurslar `/kurslar` · Kitoblar `/kitoblar` · Aloqa `/aloqa`.
+Header CTA va mobil sticky bar: "Qo'ng'iroq qilish" + "Kursga yozilish". `/natijalar` footer'da.
 
 Buyruqlar: `pnpm dev`, `pnpm build`, `pnpm lint`, `pnpm typecheck`, `pnpm format`.
 
@@ -47,10 +47,10 @@ src/
                  # FormField, ChoiceGroup — biznes logikasiz
     layout/      # Header, MobileMenu, NavLinks, Logo, Footer, LangSwitcher, MobileStickyCta
     sections/home/     # Hero, Subjects, MockBand, Extras, Faq
-    sections/center/   # CenterHero, Gallery, CenterCta
+    sections/center/   # CenterHero, CenterBand, FlowerBadge, Gallery
     sections/courses/  # CourseFilters
     sections/contact/  # ChannelsList
-    shared/      # EnrollSection/EnrollForm/EnrollDetails/EnrollSuccess, AdvantagesGrid, TeachersGrid,
+    shared/      # SubjectCta, EnrollForm/EnrollDetails/EnrollSuccess, AdvantagesGrid, TeachersGrid,
                  # NextMockCard, ResultsOverview, ResultsBars, GrowBar, CertificateCard, CourseCard,
                  # VisitInfo, PageStub, JsonLd
   content/       # QO'LDA DATA: site, subjects, teachers, advantages, mocks, results, books, courses, faq, channels
@@ -93,7 +93,8 @@ messages/        # uz.json, kaa.json, ru.json — faqat UI matnlari
 
 ## Formalar va filtrlar
 
-- Kursga yozilish: `EnrollForm` (`variant="compact"` bosh sahifada, `"full"` `/kurslar#yozilish` da).
+- Kursga yozilish: har sahifa oxirida `SubjectCta` ("Qaysi fan sizga kerak?", `id="yozilish"`):
+  fan tanlanadi, "Kursga yozilish" tugmasi `EnrollModal` ichida `EnrollForm` ni ochadi.
   RHF + `yupResolver(enrollSchema)`, `mode: "onTouched"`. Xato matnlari `enroll.errors.*` kalitlari.
   Xatoli maydon: `aria-invalid` + xato `aria-describedby` da faqat ko'ringanda.
 - Server Action `submitEnrollment`: qayta validatsiya → honeypot (`website`, to'lsa jim "success") →
@@ -118,7 +119,7 @@ messages/        # uz.json, kaa.json, ru.json — faqat UI matnlari
 --color-accent-soft: #FEF3DC
 --color-success: #1E6B34 / --color-success-soft: #E6F4EA
 --color-danger: #B42318      forma xatolari (matn va chegara)
---radius-card: 18px; --radius-btn: 12px
+--radius-card: 18px; --radius-btn: 12px; --radius-photo: 72px / --radius-photo-sm: 44px (/markaz hero surati)
 --font-display: Space Grotesk; --font-sans: Inter
 ```
 

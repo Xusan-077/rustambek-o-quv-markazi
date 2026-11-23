@@ -64,7 +64,6 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const navItems = NAV_ROUTES.map((key) => ({ href: ROUTES[key], label: nav(key) }));
   const cta = { href: ENROLL_HREF, label: common("enroll") };
   const extraItems = [
-    { href: ROUTES.books, label: footer("books") },
     { href: channel.onlineCourse.url, label: footer("onlineCourse"), external: true },
     { href: ROUTES.results, label: footer("results") },
     { href: channel.main.url, label: footer("telegramChannel"), external: true },

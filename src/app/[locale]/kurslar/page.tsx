@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { CourseCard } from "@/components/shared/CourseCard";
-import { EnrollSection } from "@/components/shared/EnrollSection";
+import { SubjectCta } from "@/components/shared/SubjectCta";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
@@ -12,6 +12,7 @@ import { routing } from "@/i18n/routing";
 import { getCourses, getSite, getSubjects } from "@/lib/data";
 import { pageMetadata } from "@/lib/metadata";
 import { ROUTES } from "@/lib/routes";
+import { subjectCtaItems } from "@/lib/view";
 import { coursesJsonLd } from "@/lib/seo";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/kurslar">): Promise<Metadata> {
@@ -45,7 +46,7 @@ export default async function CoursesPage({ params }: PageProps<"/[locale]/kursl
           ))}
         </ul>
       </Section>
-      <EnrollSection variant="full" phone={phone} />
+      <SubjectCta phone={phone} subjects={subjectCtaItems(subjects, locale)} />
     </>
   );
 }

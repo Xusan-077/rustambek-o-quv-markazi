@@ -36,7 +36,7 @@ export const site: Site = {
   mapEmbedUrl:
     "https://yandex.com/map-widget/v1/?ll=69.2401%2C41.2995&z=16&pt=69.2401%2C41.2995%2Cpm2rdm&l=map&scroll=false",
   founderPhoto: "/founder.png",
-  buildingPhoto: null, // TODO(client): bino rasmi ([BINO RASMI])
+  buildingPhoto: "/center/building-front.jpg",
   // TODO(client): bino va xonalar rasmlari (4–6 ta)
   gallery: [
     {

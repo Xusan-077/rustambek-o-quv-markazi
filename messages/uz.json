@@ -31,7 +31,8 @@
     "homeLink": "Boş sahifaga",
     "nextMock": "{number}-mock · {date}",
     "nextMockLabel": "Keyingi mock: {number}-mock, {date}",
-    "admin": "Administratsiya"
+    "admin": "Administratsiya",
+    "books": "Kitoblar"
   },
   "common": {
     "enroll": "Kursga yoziliş",
@@ -51,16 +52,17 @@
     "online": "Onlayn"
   },
   "hero": {
-    "title": "Milliy sertifikatga <mark>işonç</mark> bilan tayyorlaning",
+    "title": "Milliy sertifikatga işonç bilan tayyorlaning",
     "lead": "Qönğirotdagi markazda tajribali ustozlar, muntazam mock testlar va aniq reja. Birinçi darsga bugun yoziling.",
     "trustLabel": "Markaz raqamlarda",
-    "trustSubscribers": "{value} Telegram obunaçi",
+    "trustSubscribers": "<b>{value}</b> Telegram obunaçi",
     "trustAplus": "{number}-mockda {count} ta A+",
-    "trustSubjects": "{count} fan",
+    "trustSubjects": "<b>{count}</b> fan",
     "gradeLabel": "Milliy sertifikat darajalari",
     "gradePick": "Darajani tanlang",
     "gradeRange": "{from}–{to} ball",
-    "gradeTop": "{from} va undan yuqori ball"
+    "gradeTop": "{from} va undan yuqori ball",
+    "gradeUnit": "ball"
   },
   "founder": {
     "photoAlt": "Rustambek Mambetsapaev, markaz asosçisi",
@@ -105,7 +107,14 @@
   "subjects": {
     "title": "Kurslar",
     "lead": "Har bir fan böyiça guruhlar Qönğirotdagi boş binoda ötadi.",
-    "certificateBadge": "Milliy sertifikat · A+"
+    "certificateBadge": "Milliy sertifikat · A+",
+    "months": "{count} oy",
+    "monthsLabel": "Davomiyligi",
+    "perWeek": "{count} marta",
+    "perWeekLabel": "Haftasiga",
+    "minutes": "{count} min",
+    "minutesLabel": "Bir dars",
+    "featuresLabel": "Kursda nima bor"
   },
   "advantages": {
     "title": "Nima uçun biz",
@@ -220,7 +229,16 @@
     "galleryTitle": "Bino",
     "galleryLead": "Dars xonalari va mock test ötadigan zal.",
     "ctaTitle": "Qaysi fan sizga kerak?",
-    "ctaText": "Arizani qoldiring, administrator mos guruhni tanlaşga yordam beradi."
+    "ctaText": "Arizani qoldiring, administrator mos guruhni tanlaşga yordam beradi.",
+    "heroLine1": "Rustambek",
+    "heroLine2": "öquv markazi",
+    "heroSub": "Qönğirotda matematika, ingliz va rus tili",
+    "admission": "Qabul oçiq",
+    "band": {
+      "certificate": "Milliy sertifikat",
+      "mock": "Har hafta mock test",
+      "books": "Öz kitoblarimiz"
+    }
   },
   "courses": {
     "title": "Kurslar",
@@ -247,7 +265,8 @@
     "onlineCourse": "Onlayn kurs",
     "results": "Natijalar",
     "telegramChannel": "Telegram kanal",
-    "rights": "© {year} {name}"
+    "rights": "© {year} {name}",
+    "toTop": "Yuqoriga"
   },
   "stub": {
     "soon": "Bu sahifa tez orada tayyor böladi.",
@@ -306,5 +325,16 @@
         "text": "Kitobni yaqin kunlarda Özbekiston böylab manzilingizga yuboramiz."
       }
     }
+  },
+  "videos": {
+    "title": "Markazimiz hayotidan",
+    "lead": "Darslar, öquvçilar va natijalar haqida qisqa videolar. Hammasi Instagram sahifamizdan.",
+    "prev": "Oldingi videolar",
+    "next": "Keyingi videolar",
+    "play": "{number}-videoni körish",
+    "pending": "Video keyinroq qöşiladi",
+    "openInstagram": "Instagram'da oçiş",
+    "instagram": "Instagram",
+    "close": "Yopiş"
   }
 }

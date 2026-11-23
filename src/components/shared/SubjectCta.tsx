@@ -9,20 +9,27 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
-import { coursesHref } from "@/lib/routes";
+import { ANCHORS, coursesHref } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 import type { Phone, SubjectSlug } from "@/types/content";
 
-interface CenterCtaProps {
+export interface SubjectCtaItem {
+  slug: SubjectSlug;
+  name: string;
+  description: string;
+}
+
+interface SubjectCtaProps {
   phone: Phone;
-  subjects: { slug: SubjectSlug; name: string; description: string }[];
+  subjects: SubjectCtaItem[];
 }
 
 /**
  * "Which subject do you need?": pick a subject, the card answers and links to that course list.
- * A soft light follows the pointer across the blue card.
+ * A soft light follows the pointer across the blue card. It is the enrol block of every page
+ * (#yozilish), so the header's "Kursga yozilish" link lands here on /kurslar.
  */
-export function CenterCta({ phone, subjects }: CenterCtaProps) {
+export function SubjectCta({ phone, subjects }: SubjectCtaProps) {
   const ui = useTranslations("center");
   const common = useTranslations("common");
   const reduce = useReducedMotion();
@@ -40,7 +47,7 @@ export function CenterCta({ phone, subjects }: CenterCtaProps) {
   }
 
   return (
-    <Section tone="surface" labelledBy="center-cta-title">
+    <Section id={ANCHORS.enroll} tone="surface" labelledBy="center-cta-title">
       <Reveal>
         <div
           onPointerMove={onMove}

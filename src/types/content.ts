@@ -61,12 +61,22 @@ export interface GalleryPhoto {
 export const SUBJECT_SLUGS = ["matematika", "ingliz-tili", "rus-tili"] as const;
 export type SubjectSlug = (typeof SUBJECT_SLUGS)[number];
 
+/** How a subject's course runs. */
+export interface CoursePlan {
+  months: number;
+  lessonsPerWeek: number;
+  lessonMinutes: number;
+}
+
 export interface Subject {
   slug: SubjectSlug;
   name: Localized;
   description: Localized;
   isPrimary: boolean;
   hasMock: boolean;
+  plan: CoursePlan;
+  /** Short points shown under the plan on the course card. */
+  features: Localized<string[]>;
 }
 
 export type MockStatus = "upcoming" | "open" | "finished";
@@ -187,6 +197,17 @@ export interface FaqItem {
   scope: FaqScope;
   question: Localized;
   answer: Localized;
+}
+
+/** Where a video story plays from: an Instagram reel/post link, or a file under /public/videos. */
+export type VideoSource = { kind: "instagram"; url: string } | { kind: "file"; src: string };
+
+/** A short video in the home page carousel. */
+export interface VideoStory {
+  id: string;
+  source: VideoSource | Placeholder;
+  /** Cover image under /public. Without one a file video shows its first frame. */
+  poster: string | null;
 }
 
 export interface Teacher {
